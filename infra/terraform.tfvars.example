@@ -1,0 +1,7 @@
+owner                     = "lab-owner"
+expiry                    = "2026-11-28"
+collector_principal_arn   = "arn:aws:iam::111122223333:role/ExistingWazuhHostRole"
+collector_external_id     = "replace-with-unique-lab-external-id"
+budget_email              = "replace@example.com"
+monthly_budget_usd        = "15"
+monitored_bucket_arns     = []
