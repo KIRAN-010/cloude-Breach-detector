@@ -1,0 +1,16 @@
+[build-system]
+requires = ["setuptools==80.9.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cloude-breach-detection"
+version = "0.1.0"
+description = "Reproducible AWS CloudTrail and Wazuh security lab"
+requires-python = ">=3.11"
+dependencies = []
+
+[project.scripts]
+breach-replay = "breach_detector.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
