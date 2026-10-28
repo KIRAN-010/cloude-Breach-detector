@@ -1,0 +1,32 @@
+name: Validate lab
+on: [push, pull_request, workflow_dispatch]
+permissions:
+  contents: read
+jobs:
+  offline:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+      - name: Python tests and artifact validation
+        env:
+          PYTHONPATH: src
+        run: |
+          python3 -m unittest discover -s tests -v
+          python3 scripts/validate_repository.py
+          python3 scripts/evaluate.py
+      - name: Reject obvious credential patterns
+        run: |
+          if git grep -nE '(AKIA|ASIA)[A-Z0-9]{16}|BEGIN (RSA |EC |OPENSSH )?PRIVATE KEY' -- ':!*.yml'; then
+            echo 'Potential secret found; review required.'
+            exit 1
+          fi
+  terraform:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+      - uses: hashicorp/setup-terraform@b9cd54a3c349d3f38e8881555d616ced269862dd
+        with:
+          terraform_version: 1.10.5
+      - run: terraform -chdir=infra init -backend=false
+      - run: terraform -chdir=infra validate
+      # Does not plan/apply, authenticate to AWS, or incur cloud resource costs.
