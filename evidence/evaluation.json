@@ -1,0 +1,155 @@
+{
+  "dataset": "synthetic-v0.1.0",
+  "scenarios": 19,
+  "events": 33,
+  "true_positives": 7,
+  "false_positives": 0,
+  "false_negatives": 0,
+  "precision": 1.0,
+  "recall": 1.0,
+  "limitations": "Small hand-authored fixture set; Python semantics only. Does not establish Wazuh behavior or real-world accuracy.",
+  "results": [
+    {
+      "scenario": "D01-positive",
+      "expected": [
+        "D01"
+      ],
+      "actual": [
+        "D01"
+      ],
+      "passed": true
+    },
+    {
+      "scenario": "D01-failed",
+      "expected": [],
+      "actual": [],
+      "passed": true
+    },
+    {
+      "scenario": "D01-service",
+      "expected": [],
+      "actual": [],
+      "passed": true
+    },
+    {
+      "scenario": "D02-positive",
+      "expected": [
+        "D02"
+      ],
+      "actual": [
+        "D02"
+      ],
+      "passed": true
+    },
+    {
+      "scenario": "D02-below-threshold",
+      "expected": [],
+      "actual": [],
+      "passed": true
+    },
+    {
+      "scenario": "D02-other-source",
+      "expected": [],
+      "actual": [],
+      "passed": true
+    },
+    {
+      "scenario": "D03-positive",
+      "expected": [
+        "D03"
+      ],
+      "actual": [
+        "D03"
+      ],
+      "passed": true
+    },
+    {
+      "scenario": "D03-approved",
+      "expected": [],
+      "actual": [],
+      "passed": true
+    },
+    {
+      "scenario": "D03-failed",
+      "expected": [],
+      "actual": [],
+      "passed": true
+    },
+    {
+      "scenario": "D04-positive",
+      "expected": [
+        "D04"
+      ],
+      "actual": [
+        "D04"
+      ],
+      "passed": true
+    },
+    {
+      "scenario": "D04-read-only",
+      "expected": [],
+      "actual": [],
+      "passed": true
+    },
+    {
+      "scenario": "D04-failed",
+      "expected": [],
+      "actual": [],
+      "passed": true
+    },
+    {
+      "scenario": "D05-positive",
+      "expected": [
+        "D05"
+      ],
+      "actual": [
+        "D05"
+      ],
+      "passed": true
+    },
+    {
+      "scenario": "D05-negative",
+      "expected": [],
+      "actual": [],
+      "passed": true
+    },
+    {
+      "scenario": "D05-failed",
+      "expected": [],
+      "actual": [],
+      "passed": true
+    },
+    {
+      "scenario": "D05-update",
+      "expected": [
+        "D05"
+      ],
+      "actual": [
+        "D05"
+      ],
+      "passed": true
+    },
+    {
+      "scenario": "D06-positive",
+      "expected": [
+        "D06"
+      ],
+      "actual": [
+        "D06"
+      ],
+      "passed": true
+    },
+    {
+      "scenario": "D06-negative",
+      "expected": [],
+      "actual": [],
+      "passed": true
+    },
+    {
+      "scenario": "D06-failed",
+      "expected": [],
+      "actual": [],
+      "passed": true
+    }
+  ]
+}
