@@ -1,0 +1,130 @@
+[
+  {
+    "scenario": "D01-positive",
+    "expected_rules": [
+      "D01"
+    ],
+    "telemetry": "CloudTrail management events",
+    "synthetic": true
+  },
+  {
+    "scenario": "D01-failed",
+    "expected_rules": [],
+    "telemetry": "CloudTrail management events",
+    "synthetic": true
+  },
+  {
+    "scenario": "D01-service",
+    "expected_rules": [],
+    "telemetry": "CloudTrail management events",
+    "synthetic": true
+  },
+  {
+    "scenario": "D02-positive",
+    "expected_rules": [
+      "D02"
+    ],
+    "telemetry": "CloudTrail management events",
+    "synthetic": true
+  },
+  {
+    "scenario": "D02-below-threshold",
+    "expected_rules": [],
+    "telemetry": "CloudTrail management events",
+    "synthetic": true
+  },
+  {
+    "scenario": "D02-other-source",
+    "expected_rules": [],
+    "telemetry": "CloudTrail management events",
+    "synthetic": true
+  },
+  {
+    "scenario": "D03-positive",
+    "expected_rules": [
+      "D03"
+    ],
+    "telemetry": "CloudTrail management events",
+    "synthetic": true
+  },
+  {
+    "scenario": "D03-approved",
+    "expected_rules": [],
+    "telemetry": "CloudTrail management events",
+    "synthetic": true
+  },
+  {
+    "scenario": "D03-failed",
+    "expected_rules": [],
+    "telemetry": "CloudTrail management events",
+    "synthetic": true
+  },
+  {
+    "scenario": "D04-positive",
+    "expected_rules": [
+      "D04"
+    ],
+    "telemetry": "CloudTrail management events",
+    "synthetic": true
+  },
+  {
+    "scenario": "D04-read-only",
+    "expected_rules": [],
+    "telemetry": "CloudTrail management events",
+    "synthetic": true
+  },
+  {
+    "scenario": "D04-failed",
+    "expected_rules": [],
+    "telemetry": "CloudTrail management events",
+    "synthetic": true
+  },
+  {
+    "scenario": "D05-positive",
+    "expected_rules": [
+      "D05"
+    ],
+    "telemetry": "CloudTrail management events",
+    "synthetic": true
+  },
+  {
+    "scenario": "D05-negative",
+    "expected_rules": [],
+    "telemetry": "CloudTrail management events",
+    "synthetic": true
+  },
+  {
+    "scenario": "D05-failed",
+    "expected_rules": [],
+    "telemetry": "CloudTrail management events",
+    "synthetic": true
+  },
+  {
+    "scenario": "D05-update",
+    "expected_rules": [
+      "D05"
+    ],
+    "telemetry": "CloudTrail management events",
+    "synthetic": true
+  },
+  {
+    "scenario": "D06-positive",
+    "expected_rules": [
+      "D06"
+    ],
+    "telemetry": "CloudTrail management events",
+    "synthetic": true
+  },
+  {
+    "scenario": "D06-negative",
+    "expected_rules": [],
+    "telemetry": "CloudTrail management events",
+    "synthetic": true
+  },
+  {
+    "scenario": "D06-failed",
+    "expected_rules": [],
+    "telemetry": "CloudTrail management events",
+    "synthetic": true
+  }
+]
