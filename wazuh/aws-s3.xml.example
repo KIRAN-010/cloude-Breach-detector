@@ -1,0 +1,12 @@
+<!-- Merge inside ossec_config; do not overwrite the manager configuration. -->
+<wodle name="aws-s3">
+  <disabled>no</disabled>
+  <interval>1m</interval>
+  <run_on_start>yes</run_on_start>
+  <skip_on_error>no</skip_on_error>
+  <bucket type="cloudtrail">
+    <name>REPLACE_LOG_BUCKET</name>
+    <aws_profile>cloude-breach-collector</aws_profile>
+    <only_logs_after>2026-OCT-28</only_logs_after>
+  </bucket>
+</wodle>

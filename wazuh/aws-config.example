@@ -1,0 +1,7 @@
+# ~/.aws/config for the OS user running Wazuh's AWS integration.
+# Source credentials come from the EC2 host role, never from this file.
+[profile cloude-breach-collector]
+role_arn = arn:aws:iam::111122223333:role/cloude-breach-lab-collector
+credential_source = Ec2InstanceMetadata
+external_id = REPLACE_EXTERNAL_ID
+region = ap-south-1
