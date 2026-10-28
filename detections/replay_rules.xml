@@ -1,0 +1,9 @@
+<group name="cloud_breach_lab,">
+  <rule id="110000" level="0"><decoded_as>json</decoded_as><field name="integration">^cloud_breach_lab$</field><description>Lab replay enrichment</description></rule>
+  <rule id="110001" level="12"><if_sid>110000</if_sid><field name="cbd.matches" type="pcre2">(^|,)D01(,|$)</field><description>D01 v0.1.0: Successful root activity; event $(cbd.event_id)</description><group>D01,</group></rule>
+  <rule id="110002" level="8"><if_sid>110000</if_sid><field name="cbd.matches" type="pcre2">(^|,)D02(,|$)</field><description>D02 v0.1.0: Failed logins followed by success; event $(cbd.event_id)</description><group>D02,</group></rule>
+  <rule id="110003" level="8"><if_sid>110000</if_sid><field name="cbd.matches" type="pcre2">(^|,)D03(,|$)</field><description>D03 v0.1.0: Unapproved or cross-user key creation; event $(cbd.event_id)</description><group>D03,</group></rule>
+  <rule id="110004" level="12"><if_sid>110000</if_sid><field name="cbd.matches" type="pcre2">(^|,)D04(,|$)</field><description>D04 v0.1.0: Broad privilege grant; event $(cbd.event_id)</description><group>D04,</group></rule>
+  <rule id="110005" level="12"><if_sid>110000</if_sid><field name="cbd.matches" type="pcre2">(^|,)D05(,|$)</field><description>D05 v0.1.0: Logging reduction; event $(cbd.event_id)</description><group>D05,</group></rule>
+  <rule id="110006" level="8"><if_sid>110000</if_sid><field name="cbd.matches" type="pcre2">(^|,)D06(,|$)</field><description>D06 v0.1.0: S3 access-control change; public exposure unverified; event $(cbd.event_id)</description><group>D06,</group></rule>
+</group>
